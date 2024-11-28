@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="toDoList.css">
+    <title>ToDoList</title>
+</head>
+<body>
+    <div class="taskSection">
+        <h1>ToDoList</h1>
+        <div class="task_box">
+            <input type="text" placeholder="Enter your task" id="task_item">
+            <i class='bx bx-plus-circle' onClick="addTask()"></i>
+        </div>
+    </div>
+
+    <div class="tasks_list">
+        <div class="container_items">
+            <div id="remaining_items">
+                
+            </div>
+            <div class="middel_items">
+                <span id="all_items">All</span>
+                <span id="active_items">Active</span>
+                <span id="completed_items">completed</span>
+            </div>
+            <div id="clear_completed_items">clear completed</div>
+        </div>
+    </div>
+</body>
+<script src="toDoList.js"></script>
+</html>
