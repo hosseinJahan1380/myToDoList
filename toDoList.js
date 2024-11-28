@@ -1,9 +1,27 @@
 
+    //change theme
+    const theme_toggle = document.querySelector(".theme-toggle i")
+    const body = document.body
+
+    theme_toggle.addEventListener("click" , ()=>{
+        body.classList.toggle('dark-mode');
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('dark-mode')) {
+            theme_toggle.classList.replace('bx-sun', 'bx-moon');
+        } else {
+            theme_toggle.classList.replace('bx-moon', 'bx-sun');
+        }
+    })
+
+  
+
 const addTask = () => {
 
     const taskItem =document.getElementById("task_item").value;
    
     if(taskItem.trim()!= ""){
+
 
         const newItem = document.createElement("div");  //create a div for new task
         const task_text = document.createElement("span");
