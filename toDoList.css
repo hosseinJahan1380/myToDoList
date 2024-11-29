@@ -9,7 +9,6 @@ body{
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    /* background-color: #dce3e9; */
     background-color: #87CEEB;
 }
 .light-mode{
@@ -18,7 +17,6 @@ body{
 }
 .dark-mode{
     background-color: #1E1E2F;
-    color: #E0E0E0;
 }
 
 .theme-toggle {
@@ -37,7 +35,8 @@ body{
     align-items: center; 
     padding: 30px 30px;
     gap: 20px;
-    width: 40%;
+    width: 100%;
+    max-width: 600px;
     margin: 50px;
     border-radius: 20px;
 }
@@ -45,9 +44,9 @@ body{
     position: relative;
     display: none;
     flex-direction: column-reverse;
-    width: 40%;
+    width: 100%;
+    max-width: 600px;
     padding: 25px 25px 40px 25px;
-    
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
     background-color: #fcd80a;
@@ -61,7 +60,7 @@ body{
 .task_box{
     position: relative;
     padding: 10px 0 ;
-    width: 70%;
+    width: 90%;
     margin: auto;
 }
 .task_box input{
@@ -71,7 +70,7 @@ body{
     border: none;
     outline: none;
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .task_box i {
     position: absolute;
@@ -97,7 +96,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding:  8px;
-    width: 85%;
+    width: 90%;
     border-radius: 10px;
     background-color: #ccc;
     color: black;
@@ -105,6 +104,31 @@ body{
     font-size: 15px;
     margin: 10px auto;
 }
+/* dark mode styles */
+.dark-mode .taskSection {
+    background-color: #333;
+    color: #fff;
+}
+.dark-mode .tasks_list {
+    background-color: #444;
+    color: #fff;
+}
+.dark-mode .new_task {
+    background-color: #555;
+    color: white;
+}
+.dark-mode .task_box input {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.dark-mode .task_box i {
+    background-color: #555;
+    color: #fcd80a;
+}
+/* ---------------------- */
+
+
 .task_buttons_container{
     display: flex;
     align-items: center;
@@ -134,12 +158,13 @@ body{
     display: flex;
     position: absolute;
     justify-content: space-between;
-    border-top: 1px solid #f80606;
-    padding:8px 8px 2px 8px;
+    border-top: 2px solid #f80606;
+    padding:8px 8px 4px 8px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    bottom: 8px;    
+    bottom: 4px;    
+    cursor: pointer;
 }
 
 .tasks_list .middel_items span{
@@ -148,14 +173,27 @@ body{
 }
 .tasks_list .middel_items span:hover , #clear_completed_items:hover {
     color: #fff;
-    cursor: pointer;
 }
-#remaining_items{
-    cursor: pointer;
-}
+
 /* color of items when they are clicked */
 .item_clicked{
     color: blue;
     font-weight: bold;
+}
+
+@media (max-width:562px){
+    .taskSection{
+        margin-top: 70px;
+    }
+    .theme-toggle{
+        right: 50%;
+        transform: translateX(50%);
+        font-size: 50px;
+    }
+}
+@media (max-width:440px){
+    .task_box , .new_task{
+        width: 100%;
+    }
 }
 

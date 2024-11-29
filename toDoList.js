@@ -8,9 +8,9 @@
         body.classList.toggle('light-mode');
 
         if (body.classList.contains('dark-mode')) {
-            theme_toggle.classList.replace('bx-sun', 'bx-moon');
+            theme_toggle.classList.replace('bx-sun', 'bxs-moon');
         } else {
-            theme_toggle.classList.replace('bx-moon', 'bx-sun');
+            theme_toggle.classList.replace('bxs-moon', 'bx-sun');
         }
     })
 
