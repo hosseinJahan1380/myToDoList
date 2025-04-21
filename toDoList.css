@@ -33,7 +33,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center; 
-    padding: 30px 30px;
+    padding: 30px;
     gap: 20px;
     width: 100%;
     max-width: 600px;
@@ -43,7 +43,7 @@ body{
 .tasks_list{
     position: relative;
     display: none;
-    flex-direction: column-reverse;
+    flex-direction: column;
     width: 100%;
     max-width: 600px;
     padding: 25px 25px 40px 25px;
@@ -59,30 +59,32 @@ body{
 }
 .task_box{
     position: relative;
+    display: flex;
     padding: 10px 0 ;
     width: 90%;
-    margin: auto;
+    /* margin: auto; */
 }
 .task_box input{
-    width: 100%;
-    height: 100%;
+    flex: 1;
     padding: 10px;
     border: none;
     outline: none;
-    border-radius: 10px;
+    font-family: "Montserrat" , sans-serif;
     border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 }
 .task_box i {
     position: absolute;
     right: 0px;
     top: 50%;
     transform: translateY(-50%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
     font-size: 25px;
     background-color: #ff8c42;
     color: #007bff;
-    padding: 5px 10px;
-    border-radius: 10px;
+    padding: 6.5px 11px;
+    border-radius: 0 10px 10px 0;
     cursor: pointer;
 }
 .task_box i:hover{
@@ -159,21 +161,22 @@ body{
     position: absolute;
     justify-content: space-between;
     border-top: 2px solid #f80606;
-    padding:8px 8px 4px 8px;
+    padding:4px 8px 10px 8px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    bottom: 4px;    
+    bottom: -1px;    
     cursor: pointer;
 }
 
-.tasks_list .middel_items span{
-    font-family: "Poppins" sans-serif;
+.tasks_list .middle_items span {
+    font-family: "Poppins" , sans-serif;
     margin: 5px;
 }
-.tasks_list .middel_items span:hover , #clear_completed_items:hover {
+.tasks_list .middle_items span:hover , #clear_completed_items:hover {
     color: #fff;
 }
+
 
 /* color of items when they are clicked */
 .item_clicked{

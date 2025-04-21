@@ -135,10 +135,10 @@ const addTask = () => {
 }
 // items below of tasks
 const updateTaskCount = () =>{
-    const remainingTasks = Array.from(document.querySelectorAll(".new_task span")).filter(
-        (task) => task.style.textDecoration !== "line-through"
-    ).length;
+    const remainingTasks = [...document.querySelectorAll(".new_task span")].filter(task => task.style.textDecoration!=="line-through").length;
+   
     document.getElementById("remaining_items").textContent = `${remainingTasks} items left`;
+    document.getElementById("remaining_items").style.fontFamily = "Poppins"
 }
 
 document.addEventListener("keydown" , (e)=>{
